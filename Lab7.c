@@ -40,40 +40,40 @@ void PrintMon(int MonthNum)
     switch (MonthNum)
     {
         case Jan:
-            printf("Jan %d", Jan);
+            printf("Jan is month number: %d", Jan);
             break;
         case Feb:
-            printf("Feb %d", Feb);
+            printf("Feb is month number: %d", Feb);
             break;
         case Mar:
-            printf("Mar %d", Mar);
+            printf("Mar is month number: %d", Mar);
             break;
         case Apr:
-            printf("Apr %d", Apr);
+            printf("Apr is month number: %d", Apr);
             break;
         case May:
-            printf("May %d", May);
+            printf("May is month number: %d", May);
             break;
         case Jun:
-            printf("Jun %d", Jun);
+            printf("Jun is month number: %d", Jun);
             break;
         case Jul:
-            printf("Jul %d", Jul);
+            printf("Jul is month number: %d", Jul);
             break;
         case Aug:
-            printf("Aug %d", Aug);
+            printf("Aug is month number: %d", Aug);
             break;
         case Sep:
-            printf("Sep %d", Sep);
+            printf("Sep is month number: %d", Sep);
             break;
         case Oct:
-            printf("Oct %d", Oct);
+            printf("Oct is month number: %d", Oct);
             break;
         case Nov:
-            printf("Nov %d", Nov);
+            printf("Nov is month number: %d", Nov);
             break;
         case Dec:
-            printf("Dec %d", Dec);
+            printf("Dec is month number: %d", Dec);
             break;
         default:
             printf("Wrong number");
@@ -88,21 +88,20 @@ int main()
     scanf("%d", &MonthNum);
     PrintMon(MonthNum);
 
-    char string[12];
-//    printf("\nJuly is month number: %d \n", Jul);
-    struct Figure figure = {0, 0, 0, 0};
 
-    printf("\nSquare area with (width,height = 100) is: %d ", getFigureSquare(&figure));
+    struct Figure figure = {0, 0, 100, 100};
+
+    printf("\nSquare area with (width = 100, height = 100) is: %d ", getFigureSquare(&figure));
 
     printf("\nEnter height and width for square to calculate it's area: ");
-    scanf("%d %d \n", &figure.height, &figure.width);
-    printf("square area: %d\n", getFigureSquare(&figure));
+    scanf("%d %d", &figure.height, &figure.width);
+    printf("\nSquare area is: %d\n", getFigureSquare(&figure));
 
 
     printf("\nEnter 16cc code: ");
     scanf("%x", &printer.value);
 
-    printf("Ready: %s\n", formatState(printer.bitMask.ready));
+    printf("\nReady: %s\n", formatState(printer.bitMask.ready));
     printf("Tonner enough: %s\n", formatState(printer.bitMask.tonnerEnough));
     printf("Damaged: %s\n", formatState(printer.bitMask.damaged));
     printf("Enough paper:%s\n", formatState(printer.bitMask.noPaper));
