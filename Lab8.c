@@ -4,26 +4,60 @@
 int main()
 {
 
-    char str1[12] = "Abc";
-    char str2[12] = "Def";
-    int len;
+    char str1[16] = "Abc";
+    char str2[16] = "Def";
+    char test1[64] = "ABC";
+    char test2[64] = "defghijklmnopqrstuvwxyz";
+    char test3[16] = "Hello,world";
+    char test4[16] = "Hell";
+    char copy[64] = "";
+    short int len;
+    int result = 0;
+    int n;
 
-//Compairing two strings
-    strcat(str1,str2);
-    printf("strcat( str1, str2):   %s\n", str1);
+    /*Первое задание*/
+    printf("\nСложение двух строк: %s\n", strcat(str1, str2));
 
 
-//    /* copy str1 into str3 */
-//    strcpy(str3, str1);
-//    printf("strcpy( str3, str1) :  %s\n", str3);
-//
-//    /* concatenates str1 and str2 */
-//    strcat(str1, str2);
-//    printf("strcat( str1, str2):   %s\n", str1);
-//
-//    /* total lenghth of str1 after concatenation */
-//    len = strlen(str1);
-//    printf("strlen(str1) :  %d\n", len);
+    /*Второе задание */
+    printf("\nВведите количество элементов из 2 строки:");
+    scanf("%d", &n);
+    printf("Сложение строк: %s\n", strncat(test1, test2, n));
+
+
+    /*Третье задание*/
+    result = strncmp(test1, test2, len);
+    if (result > 0)
+        printf("\nПервая строка  >  Второй строки");
+    else if (result < 0)
+        printf("\nВторая строка  >  Первой строки");
+    else
+        printf("\nСтроки равны");
+
+    /*Четвертое задание*/
+    printf("\nКоличество сравниваемых элеметов относительно начала строки:");
+
+    scanf("%d", &n);
+
+    if (strncmp(test3, test4, n) == 0)
+        printf("\nЭти элементы одинаковые\n", n);
+
+    else
+        printf("\nЭти элементы разные\n", n);
+
+    /*Пятое задание*/
+    printf("\nКопирование строк: %s\n", strcpy(str1, copy));
+
+
+    /*Шестое задание*/
+    printf("Введите количество символов, которые нужно скопировать из одной строки в другую:");
+
+    scanf("%d", &n);
+
+    printf("Копирование символоув: %s\n", strncpy(test1, copy, n));
+
+//    /*Седьмое задание*/
+//    printf("Длина строки: '%s'-%d\n", test3, strlen(len));
 
     return 0;
 }
