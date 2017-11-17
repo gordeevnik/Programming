@@ -56,8 +56,18 @@ int main()
 
     printf("Копирование символоув: %s\n", strncpy(test1, copy, n));
 
-//    /*Седьмое задание*/
-//    printf("Длина строки: '%s'-%d\n", test3, strlen(len));
+    //Задание 7//
+    printf("Длина строки '%s'= %d\n", test3, strlen(test3));
+
+
+    // Задание 9//
+    int j;
+    printf("Write symbol:");
+    scanf("%c", &j);
+    if (strrchr(a9, j)==NULL)
+        printf("The symbol '%c' in '%s' is not Null", j, a9);
+    else
+        printf("The position '%c' in '%s'-%d", j, a9, (strrchr(a9, j)-a9+1));
 
     return 0;
 }
