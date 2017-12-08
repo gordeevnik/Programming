@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(Lab7)
+project(LabWorks)
 
 set(CMAKE_C_STANDARD 11)
 add_executable(Lab5 Lab5.c)
