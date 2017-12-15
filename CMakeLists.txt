@@ -1,7 +1,15 @@
 cmake_minimum_required(VERSION 3.8)
 project(LabWorks)
 
-set(CMAKE_C_STANDARD 11)
+set(CMAKE_CXX_STANDARD 11)
+
+set(SOURCE_FILES main.cpp)
+add_executable(LabWorks ${SOURCE_FILES})
+
+add_executable(Lab1 Lab1.c)
+add_executable(Lab2 Lab2.c)
+add_executable(Lab3 Lab3.c)
+add_executable(Lab4 Lab4.c)
 add_executable(Lab5 Lab5.c)
 add_executable(Lab6 Lab6.c)
 add_executable(Lab7 Lab7.c)
